@@ -13,6 +13,8 @@ class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     image = models.ImageField(upload_to='project_images/', blank=True, null=True)
+    gitlink = models.CharField(max_length=500,blank=True, null=True)
+    livelink = models.CharField(max_length=500,blank=True, null=True)
    
 
     def __str__(self):
